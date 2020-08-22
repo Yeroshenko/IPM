@@ -1,0 +1,52 @@
+@import '../variables'
+
+.button
+  padding: 2px 14px
+  display: inline-block
+
+  font-weight: 500
+  font-size: 14px
+  line-height: 24px
+  color: $primary-main-color
+  background-color: transparent
+  border: 2px solid $primary-main-color
+  border-radius: $border-radius
+  transition: .2s all ease-in-out
+
+  outline: 0
+  cursor: pointer
+
+  &:hover
+    color: $primary-lighten
+    border-color: $primary-lighten
+
+  &:active
+    color: $primary-darken
+    border-color: $primary-darken
+
+  &:disabled
+    color: $light-500
+    border-color: $light-500
+    cursor: not-allowed
+
+
+  &--primary
+    color: $light-100
+    background-color: $primary-main-color
+
+    &:hover
+      color: $light-100
+      background-color: $primary-lighten
+
+    &:disabled
+      color: $light-100
+      border-color: $light-500
+      background-color: $light-500
+
+  &--rounded
+    border-radius: 50px
+
+  &--large
+    padding: 10px 22px
+    font-size: 16px
+    line-height: 24px
