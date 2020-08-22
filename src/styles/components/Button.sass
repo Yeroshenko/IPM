@@ -2,7 +2,9 @@
 
 .button
   padding: 2px 14px
-  display: inline-block
+  display: inline-flex
+  flex-direction: row
+  align-items: center
 
   font-weight: 500
   font-size: 14px
@@ -50,3 +52,25 @@
     padding: 10px 22px
     font-size: 16px
     line-height: 24px
+
+  &--icon-on-right
+    flex-direction: row-reverse
+
+    .button__icon
+      margin-right: 0
+      margin-left: 0.85em
+
+  &--icon-only
+    padding: 8px
+    font-size: 16px
+    .button__icon
+      margin: 0
+
+.button__icon
+  display: flex
+  margin-right: 0.85em
+
+.button__icon svg
+  width: 1em
+  height: 1em
+  fill: currentColor

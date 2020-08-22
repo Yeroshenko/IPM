@@ -3,6 +3,7 @@ import { Story, Meta } from '@storybook/react'
 import 'styles/common/global.sass'
 
 import { Button, ButtonProps } from 'components'
+import { ReactComponent as ArrowRight } from 'assets/icons/arrow_right.svg'
 
 export default {
   title: 'Example/Button',
@@ -39,7 +40,26 @@ Large.args = {
 export const Disabled = Template.bind({})
 Disabled.args = {
   children: 'Disabled',
-  rounded: true,
-  size: 'large',
   disabled: true
+}
+
+export const IconLeft = Template.bind({})
+IconLeft.args = {
+  children: 'Icon',
+  type: 'primary',
+  icon: <ArrowRight />
+}
+
+export const IconRight = Template.bind({})
+IconRight.args = {
+  children: 'Icon right',
+  iconPosition: 'right',
+  rounded: true,
+  icon: <ArrowRight />
+}
+
+export const IconOnly = Template.bind({})
+IconOnly.args = {
+  type: 'primary',
+  icon: <ArrowRight />
 }
