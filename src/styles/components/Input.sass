@@ -1,0 +1,58 @@
+@import '../variables'
+
+.input
+  width: 100%
+  max-width: 264px
+  display: inline-flex
+  flex-direction: column
+
+.input__label
+  display: inline-flex
+  flex-direction: column
+
+
+.input__field
+  padding: 6px
+
+  font-size: 16px
+  line-height: 150%
+  color: $dark-400
+
+  border-radius: 8px
+  background-color: rgba($dark-200, .16)
+  border: 2px solid transparent
+  transition: .3s all ease-in-out
+
+  &:focus
+    outline: none
+    border-color: $dark-200
+
+  &::placeholder
+    color: $dark-200
+
+
+  &--error
+    border-color: $danger-600
+
+    &:focus
+      border-color: $danger-600
+
+.input__label-text
+  margin-bottom: 2px
+
+  font-size: 12px
+  font-weight: 500
+  line-height: 150%
+  letter-spacing: 0.2px
+  color: $dark-300
+
+.input__helper-text
+  margin-top: 4px
+  margin-left: 12px
+  font-size: 12px
+  line-height: 15px
+  color: $dark-200
+
+.input__helper-text_error
+  @extend .input__helper-text
+  color: $danger-600
